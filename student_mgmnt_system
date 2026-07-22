@@ -1,0 +1,121 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xMl_IqP8AlRS",
+        "outputId": "d952eba1-4987-49d1-d979-20e91f78eb69"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Student Name: Aryan\n",
+            "Enter Subject 1 Marks: 56\n",
+            "Enter Subject 2 Marks: 45\n",
+            "Enter Subject 3 Marks: 78\n",
+            "\n",
+            "Student Name: Aryan\n",
+            "Subject 1 Marks: 56\n",
+            "Subject 2 Marks: 45\n",
+            "Subject 3 Marks: 78\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Student Marks Calculator\n",
+        "\n",
+        "# Get student name\n",
+        "name = input(\"Enter Student Name: \")\n",
+        "\n",
+        "# Get marks for 3 subjects\n",
+        "marks = []\n",
+        "for i in range(1, 4):\n",
+        "    mark = int(input(f\"Enter Subject {i} Marks: \"))\n",
+        "    marks.append(mark)\n",
+        "\n",
+        "# Display entered marks\n",
+        "print(f\"\\nStudent Name: {name}\")\n",
+        "for i, m in enumerate(marks, 1):\n",
+        "    print(f\"Subject {i} Marks: {m}\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Calculate statistics\n",
+        "total = sum(marks)\n",
+        "average = total / len(marks)\n",
+        "highest = max(marks)\n",
+        "lowest = min(marks)"
+      ],
+      "metadata": {
+        "id": "OE83P7gkAtF8"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"\\nTotal Marks: {total}\")\n",
+        "print(f\"Average Marks: {average:.2f}\")\n",
+        "print(f\"Highest Mark: {highest}\")\n",
+        "print(f\"Lowest Mark: {lowest}\")\n",
+        "\n",
+        "# Comparisons\n",
+        "print(f\"\\nSubject 1 > Subject 2: {marks[0] > marks[1]}\")\n",
+        "print(f\"Subject 3 == Subject 1: {marks[2] == marks[0]}\")\n",
+        "\n",
+        "# Check if all marks >= 40\n",
+        "all_passed = all(m >= 40 for m in marks)\n",
+        "print(f\"\\nAll Marks >= 40: {all_passed}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A5bXyf1xAxqS",
+        "outputId": "a612ca94-e6e4-4ba9-f2bc-e8f8f25c8e33"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Total Marks: 179\n",
+            "Average Marks: 59.67\n",
+            "Highest Mark: 78\n",
+            "Lowest Mark: 45\n",
+            "\n",
+            "Subject 1 > Subject 2: True\n",
+            "Subject 3 == Subject 1: False\n",
+            "\n",
+            "All Marks >= 40: True\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
