@@ -39,7 +39,9 @@ operators - Built-in functions (`max()`, `min()`)
 -   Built-in Functions
 -   Formatted Output
 
+
 ## Author
 
-**Name:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\
-**GitHub:** \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Name:** RUPIN KAUL
+
+**GitHub:** rup019
